@@ -27,7 +27,7 @@ module Spree
             source: Spree::FoloosiCheckout.create({
               ref: ref_token,
             }),
-            amount: order.total,
+            amount: 1,
             payment_method: payment_method
           })
 
@@ -101,7 +101,7 @@ module Spree
 
       {
         redirect_url: foloosi_v2_url,
-        transaction_amount: @order.total,
+        transaction_amount: 1,
         currency: 'AED'
       }
 
